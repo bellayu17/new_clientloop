@@ -1,0 +1,569 @@
+.header {
+    background: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* space between logo and links */
+  align-items: center;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin-left: auto; /* pushes it to the right */
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #64d68a;
+}
+
+/* Mobile icon (hamburger) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  display: block;
+  border-radius: 2px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #64d68a;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: #fff 0.3s ease;
+}
+
+.btn-primary {
+    background: #64d68a;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #4daf6e;
+}
+
+.btn-secondary {
+    background: #f7f7f7;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background: #eaeaea;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 2rem 4rem; /* ← was 4rem 2rem, now increased top padding */
+    background: linear-gradient(135deg, #64d68a, #a8d9b8);
+    color: white;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #f0f0f0;
+}
+
+.hero-buttons a {
+    margin-right: 1rem;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.features {
+    padding: 4rem 2rem;
+    background: #ffffff;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.feature {
+    max-width: 30%;
+    background: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.feature h3 {
+    color: #64d68a;
+    margin-bottom: 1rem;
+}
+
+.feature p {
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.feature:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.feature:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.how-it-works {
+    padding: 4rem 2rem;
+    background: #f0f9ff;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 2rem;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.step {
+    text-align: center;
+    max-width: 25%;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    font-size: 2rem;
+    color: #64d68a;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.pricing {
+    padding: 4rem 2rem;
+    background: #ffffff;
+    text-align: center;
+}
+
+.pricing h2 {
+    margin-bottom: 2rem;
+}
+
+.pricing-plans {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.plan {
+    background: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 30%;
+}
+
+.plan h3 {
+    color: #64d68a;
+    margin-bottom: 1rem;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.plan ul li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+.footer {
+    height: 60vh;
+    background: linear-gradient(145deg, #e6fff1, #ffffff);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: #333;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #64d68a;
+}
+
+.newsletter-footer {
+    background: linear-gradient(135deg, #d0f5dc, #b2eac9); /* light green gradient */
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.newsletter-content h3 {
+    font-size: 2rem;
+    color: #2e7d4f;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter-content p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1 1 250px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* === Image-related styles used in your JSX === */
+.cta-image {
+  max-width: 300px;
+  width: 12%;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.cta-image:hover { transform: scale(1.03); }
+
+.image { /* used for vs.png */
+  max-width: 480px;
+  width: 100%;
+  background: linear-gradient(135deg, #d1fae5 0%, #ffffff 100%);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.15);
+}
+
+.partner-logo,
+.partner-logo1 {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.feature-video video {
+  width: 55%;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+.feature-video video:hover { transform: scale(1.01); }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .cta-image { width: 60%; max-width: 200px; }
+  .feature-video video { width: 100%; max-width: 100%; }
+}
+
+/* ====== Demo look & feel overrides ====== */
+:root {
+  --bg: #f6fbf8;
+  --card: #e8f6f0;
+  --accent: #36c48d;
+  --text: #0b3b2e;
+  --muted: #5b6b64;
+}
+
+/* Subtle background like the demo */
+body {
+  color: var(--text);
+  background:
+    radial-gradient(1200px 500px at 20% 10%, #eaf7f1 10%, transparent 60%),
+    #ffffff;
+}
+
+/* Header stays sticky; add soft blur + divider */
+.header {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #eef2ef;
+}
+
+/* ====== HERO layout to match demo ======
+   (replaces your .hero flex row + green gradient) */
+.hero {
+  background: transparent;                 /* remove green gradient */
+  color: var(--text);                       /* dark text like demo */
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;         /* text : mockup */
+  gap: 36px;
+  align-items: center;
+  padding: 52px 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(28px, 5vw, 56px);
+  line-height: 1.02;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.hero-content p {
+  font-size: clamp(14px, 1.4vw, 18px);
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+}
+
+/* ====== Phone mockup slider (smaller) ====== */
+.phone-demo {
+  background: var(--card);
+  border-radius: 28px;
+  padding: 14px;
+  box-shadow: 0 12px 40px rgba(16,185,129,0.15);
+  width: 240px;              /* <- smaller desktop size */
+}
+
+.viewport {
+  width: 100%;
+  aspect-ratio: 375 / 812;   /* iPhone-ish */
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.track {                     /* animated translateX set in JS/React */
+  display: flex;
+  height: 100%;
+  transition: transform 500ms ease;
+  touch-action: pan-y;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #fff;
+}
+.slide img {
+  width: 92%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+/* Dots + controls */
+.dots { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
+.dot { width: 8px; height: 8px; border-radius: 999px; background: #d1d5db; }
+.dot.active { width: 18px; background: var(--accent); }
+.controls { display: flex; gap: 10px; margin-top: 10px; }
+.btn { flex: 1; padding: 10px 12px; border-radius: 999px; border: 1px solid #e5e7eb; background: #fff; font-weight: 600; cursor: pointer; }
+.btn.primary { background: var(--accent); color: #fff; border: none; }
+
+/* Anchor offset so nav links land nicely */
+section { scroll-margin-top: 76px; }
+
+/* Responsive stack like the demo */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-top: 28px; text-align: center; }
+  .phone-demo { width: 200px; margin-inline: auto; }  /* <- smaller on mobile */
+}
+
+/* Make sure our layout uses grid, not the global flex */
+.pricing .pricing-plans {
+  --col-min: 420px;
+  width: min(1400px, 96vw);
+  margin: 32px auto 0;
+  display: grid; /* override global flex */
+  grid-template-columns: repeat(auto-fill, minmax(var(--col-min), 1fr));
+  gap: clamp(18px, 2vw, 28px);
+  align-items: stretch;
+}
+
+/* Breakpoint tweaks for min card width */
+@media (max-width: 1024px) { .pricing .pricing-plans { --col-min: 360px; } }
+@media (max-width: 720px)  { .pricing .pricing-plans { --col-min: 320px; } }
+@media (max-width: 420px)  { .pricing .pricing-plans { --col-min: 280px; } }
+
+/* Kill the global max-width and any flex sizing on cards */
+.pricing .plan {
+  max-width: none;       /* ← overrides max-width: 30% */
+  width: auto;
+  flex: initial;         /* just in case flex still applies somewhere */
+  height: 100%;
+}
+
+/* --- MOBILE EDGE-SAFE CONTAINER PADDING & CENTERING --- */
+@media (max-width: 900px) {
+  /* Make sure the main sections center their inner content */
+  .hero,
+  .story-section,
+  .partners,
+  .testimonials,
+  .pricing,
+  .metrics-section,
+  .feature-section {
+    padding-inline: max(16px, env(safe-area-inset-left)) max(16px, env(safe-area-inset-right));
+  }
+
+  /* FeatureSplit phone area: force center */
+  .feature-section .media-wrap { justify-content: center !important; }
+  .feature-section .phone-shell { margin-inline: auto !important; }
+
+  /* Hide any side arrows on very small screens to avoid overflow */
+  .feature-section .arrow-out,
+  .feature-section .edge-cta { display: none !important; }
+}
+
+/* --- HERO PHONE (your top slider) --- */
+@media (max-width: 900px) {
+  .hero .stack,
+  .hero .stage { margin-inline: auto; }
+  .hero .phone-shell { margin-inline: auto !important; }
+}
+
+/* --- PRICING: CENTER + FULLY VISIBLE ON PHONES --- */
+.pricing .pricing-plans {
+  /* Center and give breathing room on both sides at all sizes */
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(12px, 4vw, 24px);
+}
+
+@media (max-width: 1024px) { .pricing .pricing-plans { --col-min: 360px; } }
+@media (max-width: 720px)  { .pricing .pricing-plans { --col-min: 320px; } }
+@media (max-width: 420px)  { .pricing .pricing-plans { --col-min: 280px; } }
+
+/* If you kept legacy .pricing-plans flex + .plan max-width:30%, neutralize them */
+.pricing .pricing-plans { display: grid !important; grid-template-columns: repeat(auto-fill, minmax(var(--col-min, 360px), 1fr)); }
+.pricing .plan, .pricing .pricing-card { max-width: none !important; width: auto; height: 100%; }
+
+/* --- GLOBAL SAFETY NETS --- */
+html, body { overflow-x: hidden; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* === Phone mockup responsive sizing & centering === */
+@media (max-width: 900px) {
+    .hero .phone-shell {
+    margin-inline: auto !important;
+    width: min(300px, 85vw);   /* smaller on mobile */
+  }
+  
+  /* FeatureSplit phone */
+  .feature-section .phone-shell {
+    margin-inline: auto !important;
+    width: min(300px, 85vw);   /* shrink to fit & center */
+  }
+
+  /* Make sure containers don’t push phone off-screen */
+  .feature-section .media-wrap {
+    display: flex;
+    justify-content: center !important;
+    width: 100%;
+  }
+}
