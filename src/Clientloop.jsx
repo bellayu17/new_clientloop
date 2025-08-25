@@ -320,6 +320,87 @@ function Metrics() {
 /* =========================
    Stories (elevated cards)
 ========================= */
+// function Stories() {
+//   return (
+//     <section className="story-section" id="stories">
+//       <style>{`
+//         .story-section {
+//           padding: clamp(72px, 12vh, 140px) 1.5rem;
+//           background:
+//             radial-gradient(1200px 420px at 10% -10%, rgba(54,196,141,.08), transparent 60%),
+//             radial-gradient(1000px 380px at 110% 110%, rgba(54,196,141,.08), transparent 60%);
+//         }
+//         .story-head {
+//           max-width: 1000px; margin: 0 auto 28px; text-align: center;
+//         }
+//         .story-title {
+//           font-size: clamp(28px, 4.6vw, 44px); font-weight: 900; letter-spacing: -0.02em; color:#0f172a; margin:0;
+//         }
+//         .story-sub {
+//           color:#56636a; margin:10px auto 0; max-width: 760px; font-size: clamp(15px, 1.6vw, 18px);
+//         }
+
+//         .story-grid {
+//           max-width: 1100px; margin: 34px auto 0;
+//           display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px;
+//         }
+//         @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } }
+
+//         .story-card {
+//           position: relative; overflow: hidden; border-radius: 28px;
+//           background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 100%);
+//           border:1px solid #eef2ef;
+//           box-shadow: 0 30px 90px rgba(34,197,94,0.08), 0 6px 18px rgba(0,0,0,0.06);
+//           display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: center;
+//           padding: clamp(18px, 3vw, 28px);
+//         }
+//         @media (max-width: 560px) { .story-card { grid-template-columns: 1fr; text-align: left; } }
+
+//         .story-photo {
+//           width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 20px;
+//           box-shadow: 0 10px 26px rgba(0,0,0,.08);
+//         }
+
+//         .story-quote {
+//           position: relative; margin: 0; color:#384750; font-size: clamp(15px, 1.7vw, 18px); line-height: 1.55;
+//         }
+//         .story-quote::before {
+//           content: "“"; position: absolute; left: -18px; top: -10px; font-size: 42px; line-height: 1; color: rgba(54,196,141,.55);
+//         }
+//         .story-author {
+//           margin: 10px 0 0; font-weight: 800; color:#0b3b2e; letter-spacing: .01em;
+//         }
+//       `}</style>
+
+//       <div className="story-head">
+//         <h2 className="story-title">Our Purpose in Building</h2>
+//         <p className="story-sub">Relationships—not blasts. We’re crafting tools that keep connections warm and human at scale.</p>
+//       </div>
+
+//       <div className="story-grid">
+//         <article className="story-card" data-aos="fade-up">
+//           <img src="/founder.jpg" alt="Bella Y." className="story-photo" />
+//           <div>
+//             <p className="story-quote">
+//               With a background in ecommerce, I learned the work isn’t sending more—it’s saying the right thing at the right time. That’s what Clientloop makes effortless.
+//             </p>
+//             <p className="story-author">— Bella Y., Co-founder</p>
+//           </div>
+//         </article>
+
+//         <article className="story-card" data-aos="fade-up" data-aos-delay="120">
+//           <img src="/arbi.jpg" alt="Arbi T." className="story-photo" />
+//           <div>
+//             <p className="story-quote">
+//               Using Clientloop has changed the way I start my day. Waking up to thoughtful replies from past connections is not just exciting — it reminds me how powerful staying engaged can be.
+//             </p>
+//             <p className="story-author">— Arbi T., Co-founder</p>
+//           </div>
+//         </article>
+//       </div>
+//     </section>
+//   );
+// }
 function Stories() {
   return (
     <section className="story-section" id="stories">
@@ -342,23 +423,15 @@ function Stories() {
 
         .story-grid {
           max-width: 1100px; margin: 34px auto 0;
-          display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px;
+          display: grid; grid-template-columns: 1fr; gap: 22px;
         }
-        @media (max-width: 900px) { .story-grid { grid-template-columns: 1fr; } }
 
         .story-card {
           position: relative; overflow: hidden; border-radius: 28px;
           background: linear-gradient(180deg, #ffffff 0%, #fbfdfc 100%);
           border:1px solid #eef2ef;
           box-shadow: 0 30px 90px rgba(34,197,94,0.08), 0 6px 18px rgba(0,0,0,0.06);
-          display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: center;
           padding: clamp(18px, 3vw, 28px);
-        }
-        @media (max-width: 560px) { .story-card { grid-template-columns: 1fr; text-align: left; } }
-
-        .story-photo {
-          width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 20px;
-          box-shadow: 0 10px 26px rgba(0,0,0,.08);
         }
 
         .story-quote {
@@ -379,23 +452,17 @@ function Stories() {
 
       <div className="story-grid">
         <article className="story-card" data-aos="fade-up">
-          <img src="/founder.jpg" alt="Bella Y." className="story-photo" />
-          <div>
-            <p className="story-quote">
-              With a background in ecommerce, I learned the work isn’t sending more—it’s saying the right thing at the right time. That’s what Clientloop makes effortless.
-            </p>
-            <p className="story-author">— Bella Y., Co-founder</p>
-          </div>
+          <p className="story-quote">
+            With a background in ecommerce, I learned the work isn’t sending more—it’s saying the right thing at the right time. That’s what Clientloop makes effortless.
+          </p>
+          <p className="story-author">— Bella Y., Co-founder</p>
         </article>
 
         <article className="story-card" data-aos="fade-up" data-aos-delay="120">
-          <img src="/arbi.jpg" alt="Arbi T." className="story-photo" />
-          <div>
-            <p className="story-quote">
-              Using Clientloop has changed the way I start my day. Waking up to thoughtful replies from past connections is not just exciting — it reminds me how powerful staying engaged can be.
-            </p>
-            <p className="story-author">— Arbi T., Co-founder</p>
-          </div>
+          <p className="story-quote">
+            Using Clientloop has changed the way I start my day. Waking up to thoughtful replies from past connections is not just exciting — it reminds me how powerful staying engaged can be.
+          </p>
+          <p className="story-author">— Arbi T., Co-founder</p>
         </article>
       </div>
     </section>
